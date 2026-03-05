@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero/Hero';
 import WorkList from './components/WorkList/WorkList';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/concepts" element={<ConceptsPage />} />
       </Routes>
       <StickyBar />
+      <Analytics />
     </>
   );
 }
