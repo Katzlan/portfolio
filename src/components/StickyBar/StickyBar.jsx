@@ -3,7 +3,7 @@ import { designer } from '../../data/projects.js';
 import styles from './StickyBar.module.css';
 import telegramIcon from '../../assets/telegram.svg';
 
-const CV_URL = 'https://drive.google.com/file/d/1KMEWZECCzqiDKdhxcFHwoQifjR6efagC/view?usp=sharing';
+const CV_URL = '/cv.pdf';
 
 const TOAST_MESSAGES = [
   'Напишите мне, чтобы получить доступ',
