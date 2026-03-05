@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #000;
+  --surface: #0a0a0a;
+  --surface-hover: #0f0f0f;
+  --border: #141414;
+  --border-light: #1e1e1e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #666;
+  --text-muted: #444;
+  --accent: #ffffff;
+  --tag-bg: #1e1e1e;
+  --tag-text: #888;
+  --badge-nda-bg: #1a1a1a;
+  --badge-nda-text: #555;
+  --badge-soon-bg: #1a1a1a;
+  --badge-soon-text: #555;
+  --badge-live-bg: #0f1f0f;
+  --badge-live-text: #4caf50;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+}

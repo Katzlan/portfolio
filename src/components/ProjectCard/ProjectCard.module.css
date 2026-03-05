@@ -1,0 +1,161 @@
+.card {
+  display: block;
+  border-bottom: 1px solid var(--border);
+  padding: 48px;
+  transition: background var(--transition);
+  animation: fadeUp 0.6s ease both;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: var(--surface-hover);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.num {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-light);
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badgeNDA {
+  background: var(--badge-nda-bg);
+  color: var(--badge-nda-text);
+  border: 1px solid var(--border);
+}
+
+.badgeSoon {
+  background: var(--badge-soon-bg);
+  color: var(--badge-soon-text);
+  border: 1px solid var(--border);
+}
+
+.badgeLive {
+  background: var(--badge-live-bg);
+  color: var(--badge-live-text);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.mockupArea {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.mockupRow {
+  display: flex;
+  gap: 12px;
+  height: 420px;
+}
+
+.mockup {
+  border-radius: 12px;
+  background: linear-gradient(135deg, #161616 0%, #1c1c1c 50%, #161616 100%);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.mockupWide {
+  flex: 1.8;
+}
+
+.mockupTall {
+  flex: 1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 32px 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .right {
+    align-items: flex-start;
+  }
+
+  .tags {
+    justify-content: flex-start;
+  }
+
+  .mockupRow {
+    height: 240px;
+  }
+}
