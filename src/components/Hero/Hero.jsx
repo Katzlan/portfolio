@@ -21,6 +21,7 @@ export default function Hero() {
             <video
               className={styles.avatar}
               src="/avatar.mp4"
+              poster="/avatar.png"
               autoPlay
               loop
               muted
