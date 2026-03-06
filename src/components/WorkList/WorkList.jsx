@@ -35,14 +35,6 @@ function LockIcon() {
   );
 }
 
-function CensorIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-      <rect x="0" y="4" width="18" height="10" rx="2" fill="currentColor"/>
-    </svg>
-  );
-}
-
 export default function WorkList() {
   const navigate = useNavigate();
   const [hoveredId, setHoveredId] = useState(null);
@@ -63,7 +55,9 @@ export default function WorkList() {
         >
           <div className={styles.content}>
             <div className={styles.meta}>
-              <span className={styles.icon}>{work.locked ? <CensorIcon /> : icons[work.icon]}</span>
+              <span className={`${styles.icon}${work.locked ? ` ${styles.iconLocked}` : ''}`}>
+                {icons[work.icon]}
+              </span>
               <span className={styles.company}>
                 {work.company}, {work.year}
               </span>
