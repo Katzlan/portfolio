@@ -113,10 +113,11 @@ export default function ProjectPage() {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Итерации: что поправили после первых прогонов</h2>
             <p className={styles.text}>После быстрых проверок на понятность мы подкрутили две вещи:<br />1. Убрали лишние шаги вокруг подтверждения, оставив один главный сценарий без "куда нажать".<br />2. Сделали первый запуск более направленным: меньше "ознакомления", больше "сделай один раз — и пользуйся"</p>
-            <div className={styles.heroImage}>
-              <img src={heroFintechAbtest} alt="" />
-            </div>
           </section>
+
+          <div className={styles.heroImage}>
+            <img src={heroFintechAbtest} alt="" />
+          </div>
 
           {/* Mistakes */}
           <section className={styles.section}>
