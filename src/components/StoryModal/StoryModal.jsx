@@ -1,9 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './StoryModal.module.css';
+import concept1 from '../../assets/concepts/1.png';
+import concept2 from '../../assets/concepts/2.png';
+import concept3 from '../../assets/concepts/3.png';
+import concept4 from '../../assets/concepts/4.png';
+import concept5 from '../../assets/concepts/5.png';
 
 const SLIDE_DURATION = 5000;
 const TICK = 50;
-const CONCEPT_COUNT = 5;
+const CONCEPTS = [concept1, concept2, concept3, concept4, concept5];
 
 export default function StoryModal({ onClose }) {
   const [elapsed, setElapsed] = useState(0);
@@ -12,7 +17,7 @@ export default function StoryModal({ onClose }) {
   const intervalRef = useRef(null);
 
   const imgSrc = useMemo(
-    () => `/src/assets/concepts/${Math.floor(Math.random() * CONCEPT_COUNT) + 1}.png`,
+    () => CONCEPTS[Math.floor(Math.random() * CONCEPTS.length)],
     [],
   );
 
