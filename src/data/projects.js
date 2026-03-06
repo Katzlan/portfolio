@@ -106,6 +106,6 @@ export const designer = {
   bio: "I design digital products that people actually want to use. Currently shaping product experiences at [Company]. I build design systems, craft interaction details, and translate complex problems into clean, scalable interfaces.",
   email: "hello@yourname.com",
   telegram: "https://t.me/katzlan",
-  linkedin: "https://www.linkedin.com/in/%E2%9C%A6-andy-ignatov-662a38252/",
+  linkedin: "https://www.linkedin.com/in/andy-ignatov-662a38252/",
   calendly: null,
 };
