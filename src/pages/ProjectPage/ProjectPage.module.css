@@ -76,7 +76,7 @@
   max-width: calc(100vw - (var(--page-pad-x) * 2));
   aspect-ratio: 4 / 3;
   background: var(--surface);
-  border-radius: var(--radius);
+  border-radius: 32px;
   margin-top: 0;
   margin-bottom: 0;
   transform: translateX(-50%);
