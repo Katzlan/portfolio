@@ -3,6 +3,7 @@
   max-width: 636px;
   margin: 0 auto;
   padding: 48px 48px 160px;
+  --page-pad-x: 48px;
   animation: fadeUp 0.5s ease both;
 }
 
@@ -45,7 +46,7 @@
 
 .title {
   font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   color: var(--text-primary);
   line-height: 1.15;
@@ -54,7 +55,7 @@
 .summary {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
 }
 
@@ -63,18 +64,22 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 20px;
 }
 
 /* ── Hero image ──────────────────────────────────── */
 
 .heroImage {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  width: 828px;
+  max-width: calc(100vw - (var(--page-pad-x) * 2));
   aspect-ratio: 4 / 3;
   background: var(--surface);
   border-radius: var(--radius);
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: translateX(-50%);
   overflow: hidden;
 }
 
@@ -86,10 +91,12 @@
 }
 
 .projectPhoto {
-  width: 100%;
+  width: calc(100% + (var(--page-pad-x) * 2));
   border-radius: var(--radius);
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: calc(var(--page-pad-x) * -1);
+  margin-right: calc(var(--page-pad-x) * -1);
   display: block;
 }
 
@@ -110,13 +117,15 @@
 }
 
 .scrollImage {
-  width: 100%;
+  width: calc(100% + (var(--page-pad-x) * 2));
   height: auto;
   overflow-x: auto;
   overflow-y: hidden;
   border-radius: var(--radius);
   background: var(--surface);
   margin-top: 24px;
+  margin-left: calc(var(--page-pad-x) * -1);
+  margin-right: calc(var(--page-pad-x) * -1);
   scrollbar-width: none;
 }
 
@@ -151,8 +160,8 @@
 
 .text {
   font-size: 1rem;
-  color: var(--text-secondary);
-  font-weight: 300;
+  color: #fff;
+  font-weight: 400;
   line-height: 1.75;
   white-space: pre-line;
 }
@@ -203,7 +212,7 @@
 
 .metricValue {
   font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.04em;
   color: var(--text-primary);
   line-height: 1;
@@ -211,8 +220,8 @@
 
 .metricLabel {
   font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 300;
+  color: #fff;
+  font-weight: 400;
   max-width: 100%;
   line-height: 1.45;
 }
@@ -228,8 +237,8 @@
 
 .roleItem {
   font-size: 1rem;
-  color: var(--text-secondary);
-  font-weight: 300;
+  color: #fff;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -238,7 +247,7 @@
 .placeholder {
   font-size: 1rem;
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 8px;
 }
 
@@ -260,6 +269,7 @@
 @media (max-width: 768px) {
   .page {
     padding: 32px 24px 80px;
+    --page-pad-x: 24px;
   }
 
   .back {

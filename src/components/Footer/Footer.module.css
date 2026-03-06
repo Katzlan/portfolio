@@ -23,7 +23,7 @@
 
 .cta {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   color: var(--text-primary);
 }

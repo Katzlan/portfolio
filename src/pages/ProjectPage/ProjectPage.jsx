@@ -55,7 +55,9 @@ export default function ProjectPage() {
             ))}
           </section>
 
-          <img className={styles.projectPhoto} src={heroFintechCjm} alt="" />
+          <div className={styles.heroImage}>
+            <img src={heroFintechCjm} alt="" />
+          </div>
 
           {/* Expected result */}
           <section className={styles.section}>
