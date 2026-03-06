@@ -6,21 +6,28 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// Prerender отключён на Vercel — сборка зависала по таймауту
+const enablePrerender = process.env.ENABLE_PRERENDER === '1'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    vitePrerenderPlugin({
-      renderTarget: '#root',
-      prerenderScript: path.join(__dirname, 'prerender', 'entry.jsx'),
-      additionalPrerenderRoutes: [
-        '/',
-        '/concepts',
-        '/work/project-alpha',
-        '/work/horizon',
-        '/work/gazprom-id-2025-2026',
-      ],
-    }),
+    ...(enablePrerender
+      ? [
+          vitePrerenderPlugin({
+            renderTarget: '#root',
+            prerenderScript: path.join(__dirname, 'prerender', 'entry.jsx'),
+            additionalPrerenderRoutes: [
+              '/',
+              '/concepts',
+              '/work/project-alpha',
+              '/work/horizon',
+              '/work/gazprom-id-2025-2026',
+            ],
+          }),
+        ]
+      : []),
     {
       name: 'force-reload-on-source-change',
       handleHotUpdate({ file, server }) {
