@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "ENABLE_PRERENDER=1 vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
