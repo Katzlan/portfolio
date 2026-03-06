@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ConceptsPage.module.css';
 
@@ -24,26 +25,30 @@ export default function ConceptsPage() {
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-        Back
+        Назад
       </button>
 
-      <div className={styles.content}>
+      <header className={styles.header}>
         <h1 className={styles.title}>Концепты для души</h1>
+      </header>
 
-        <div className={styles.gallery}>
-          {photos.map(({ src, caption }, i) => (
-            <div key={i} className={styles.galleryCard}>
-              <div className={styles.galleryItem}>
+      <div className={styles.body}>
+        {photos.map(({ src, caption }, i) => (
+          <Fragment key={i}>
+            <div className={styles.heroImageWrapper}>
+              <div className={styles.heroImage}>
                 {src ? (
-                  <img src={src} alt={caption} className={styles.galleryImg} />
+                  <img src={src} alt={caption} className={styles.heroImg} />
                 ) : (
-                  <div className={styles.galleryPlaceholder} />
+                  <div className={styles.heroPlaceholder} />
                 )}
               </div>
-              <p className={styles.galleryCaption}>{caption}</p>
             </div>
-          ))}
-        </div>
+            <section className={styles.section}>
+              <p className={styles.text}>{caption}</p>
+            </section>
+          </Fragment>
+        ))}
       </div>
     </div>
   );

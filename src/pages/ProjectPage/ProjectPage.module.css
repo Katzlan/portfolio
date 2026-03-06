@@ -71,17 +71,20 @@
 
 /* ── Hero image ──────────────────────────────────── */
 
+.heroImageWrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  display: flex;
+  justify-content: center;
+}
+
 .heroImage {
   position: relative;
-  left: 50%;
   width: 828px;
   max-width: calc(100vw - (var(--page-pad-x) * 2));
   aspect-ratio: 4 / 3;
   background: var(--surface);
   border-radius: 32px;
-  margin-top: 0;
-  margin-bottom: 0;
-  transform: translateX(-50%);
   overflow: hidden;
 }
 
@@ -90,6 +93,24 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Отдельный стиль для конкретного блока — можно менять background-color и т.п. */
+.heroImageAccent {
+  background: #fff;
+}
+
+.heroImageAccent img {
+  object-fit: contain;
+}
+
+/* Изображение влезает по высоте, полосы сверху/снизу — #fff */
+.heroImageContain {
+  background: #fff;
+}
+
+.heroImageContain img {
+  object-fit: contain;
 }
 
 .projectPhoto {

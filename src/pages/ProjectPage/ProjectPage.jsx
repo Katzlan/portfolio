@@ -35,8 +35,10 @@ export default function ProjectPage() {
           {project ? project.title : 'Проект не найден'}
         </h1>
         {cs && (
-          <div className={styles.heroImage}>
-            <img src={heroFintech} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintech} alt="" />
+            </div>
           </div>
         )}
       </header>
@@ -55,8 +57,10 @@ export default function ProjectPage() {
             ))}
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechCjm} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechCjm} alt="" />
+            </div>
           </div>
 
           {/* Expected result */}
@@ -71,8 +75,10 @@ export default function ProjectPage() {
             </div>
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechCjmDiagram} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={`${styles.heroImage} ${styles.heroImageContain}`}>
+              <img src={heroFintechCjmDiagram} alt="" />
+            </div>
           </div>
 
           {/* Understanding */}
@@ -88,8 +94,10 @@ export default function ProjectPage() {
             <p className={styles.text}>Мы сделали так, чтобы подтверждение не требовало поиска: пришёл запрос → открыл приложение → сделал одно понятное действие. При этом интерфейс должен поддерживать тревожную мысль пользователя «а что вообще происходит?» — через ясные статусы и отсутствие лишних развилок</p>
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechUnderstanding} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechUnderstanding} alt="" />
+            </div>
           </div>
 
           {/* Research */}
@@ -99,8 +107,10 @@ export default function ProjectPage() {
             <p className={styles.text}>Поэтому мы сделали простой принцип: первый вход должен приводить к первому полезному результату. Не "посмотри тут настройки", не "ознакомься с функциями", а конкретно — подключи первый сервис и пойми, что дальше аутентификатор будет помогать</p>
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechOnboarding} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechOnboarding} alt="" />
+            </div>
           </div>
 
           {/* Iterations */}
@@ -115,8 +125,10 @@ export default function ProjectPage() {
             <p className={styles.text}>После быстрых проверок на понятность мы подкрутили две вещи:<br />1. Убрали лишние шаги вокруг подтверждения, оставив один главный сценарий без "куда нажать".<br />2. Сделали первый запуск более направленным: меньше "ознакомления", больше "сделай один раз — и пользуйся"</p>
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechAbtest} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechAbtest} alt="" />
+            </div>
           </div>
 
           {/* Mistakes */}
@@ -133,8 +145,10 @@ export default function ProjectPage() {
             <p className={styles.text}>{cs.whatsNext}</p>
           </section>
 
-          <div className={styles.heroImage}>
-            <img src={heroFintechFlow} alt="" />
+          <div className={styles.heroImageWrapper}>
+            <div className={`${styles.heroImage} ${styles.heroImageAccent}`}>
+              <img src={heroFintechFlow} alt="" />
+            </div>
           </div>
 
           {/* My role */}
