@@ -7,6 +7,8 @@ import heroFintechCjmDiagram from '../../assets/hero-fintech-cjm-diagram.png';
 import heroFintechOnboarding from '../../assets/hero-fintech-onboarding.png';
 import heroFintechUnderstanding from '../../assets/hero-fintech-understanding.png';
 import heroFintechAbtest from '../../assets/hero-fintech-abtest.png';
+import heroFintechPush from '../../assets/hero-fintech-push.png';
+import heroFintechFlowScreens from '../../assets/hero-fintech-flow-screens.png';
 import heroFintechFlow from '../../assets/hero-fintech-flow.png';
 
 export default function ProjectPage() {
@@ -128,6 +130,18 @@ export default function ProjectPage() {
           <div className={styles.heroImageWrapper}>
             <div className={styles.heroImage}>
               <img src={heroFintechAbtest} alt="" />
+            </div>
+          </div>
+
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechPush} alt="" />
+            </div>
+          </div>
+
+          <div className={styles.heroImageWrapper}>
+            <div className={styles.heroImage}>
+              <img src={heroFintechFlowScreens} alt="" />
             </div>
           </div>
 
