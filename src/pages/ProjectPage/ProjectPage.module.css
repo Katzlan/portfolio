@@ -95,9 +95,9 @@
   display: block;
 }
 
-/* Отдельный стиль для конкретного блока — можно менять background-color и т.п. */
+/* Отдельный стиль для конкретного блока — цвет как у остальных heroImage */
 .heroImageAccent {
-  background: #fff;
+  background-color: var(--surface);
 }
 
 .heroImageAccent img {
