@@ -6,7 +6,9 @@ import heroFintechCjmDiagram from '../../assets/hero-fintech-cjm-diagram.png';
 import heroFintechOnboarding from '../../assets/hero-fintech-onboarding.png';
 import heroFintechUnderstanding from '../../assets/hero-fintech-understanding.png';
 import heroFintechAbtest from '../../assets/hero-fintech-abtest.png';
-import heroCorporateCalendar from '../../assets/hero-corporate-calendar.png';
+import heroFintechPush from '../../assets/hero-fintech-push.png';
+import heroFintechFlowScreens from '../../assets/hero-fintech-flow-screens.png';
+import heroCorporateCalendarIteration from '../../assets/hero-corporate-calendar-iteration.png';
 import heroFintechFlow from '../../assets/hero-fintech-flow.png';
 
 export default function ProjectPage() {
@@ -14,7 +16,8 @@ export default function ProjectPage() {
   const navigate = useNavigate();
   const project = works.find((w) => w.slug === slug);
   const cs = project?.caseStudy;
-
+  const imgs = project?.bodyImages;
+  const isCorporateGid = project?.slug === 'corporate-gid';
 
   return (
     <div className={styles.page}>
@@ -77,7 +80,7 @@ export default function ProjectPage() {
 
           <div className={styles.heroImageWrapper}>
             <div className={`${styles.heroImage} ${styles.heroImageContain}`}>
-              <img src={heroFintechCjmDiagram} alt="" />
+              <img src={imgs?.cjmDiagram ?? heroFintechCjmDiagram} alt="" />
             </div>
           </div>
 
@@ -109,8 +112,8 @@ export default function ProjectPage() {
           </section>
 
           <div className={styles.heroImageWrapper}>
-            <div className={styles.heroImage}>
-              <img src={heroFintechUnderstanding} alt="" />
+            <div className={`${styles.heroImage} ${project?.slug === 'authenticator-app-gid' ? styles.heroImageWhiteBg : ''}`}>
+              <img src={imgs?.understanding ?? heroFintechUnderstanding} alt="" />
             </div>
           </div>
 
@@ -138,21 +141,25 @@ export default function ProjectPage() {
 
           <div className={styles.heroImageWrapper}>
             <div className={styles.heroImage}>
-              <img src={heroFintechOnboarding} alt="" />
+              <img src={imgs?.onboarding ?? heroFintechOnboarding} alt="" />
             </div>
           </div>
 
           {/* Iterations */}
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>{cs.iterationsSectionTitle ?? "Почему это должно победить SMS"}</h2>
-            <div className={styles.solutionCard}>
-              <blockquote className={styles.text}>Релевантный контент вместо общего потока</blockquote>
-            </div>
             <p className={styles.text}>{cs.iterations}</p>
+            {cs.iterationsAdditional && (
+              <div className={styles.solutionCard}>
+                <blockquote className={styles.text}>Релевантный контент вместо общего потока</blockquote>
+              </div>
+            )}
             {cs.iterationsAdditional && <p className={styles.text}>{cs.iterationsAdditional}</p>}
-            <div className={styles.solutionCard}>
-              <blockquote className={styles.text}>Более живая связность через людей</blockquote>
-            </div>
+            {cs.iterationsAdditional2 && (
+              <div className={styles.solutionCard}>
+                <blockquote className={styles.text}>Более живая связность через людей</blockquote>
+              </div>
+            )}
             {cs.iterationsAdditional2 && <p className={styles.text}>{cs.iterationsAdditional2}</p>}
             {cs.iterationsAdditional3 && <p className={styles.text}>{cs.iterationsAdditional3}</p>}
             {cs.iterationsAdditional4 && (
@@ -185,31 +192,40 @@ export default function ProjectPage() {
 
           <div className={styles.heroImageWrapper}>
             <div className={styles.heroImage}>
-              <img src={heroFintechAbtest} alt="" />
+              <img src={imgs?.abtest2 ?? heroFintechPush} alt="" />
             </div>
           </div>
 
-          {(cs.abTestSolutionCard2 || cs.abTestSectionAdditional2) && (
-            <section className={styles.section}>
-              {cs.abTestSolutionCard2 && (
-                <div className={styles.solutionCard}>
-                  <blockquote className={styles.text}>{cs.abTestSolutionCard2}</blockquote>
-                </div>
-              )}
-              {cs.abTestSectionAdditional2 && (
-                <p className={styles.text}>{cs.abTestSectionAdditional2}</p>
-              )}
-              {cs.abTestSectionAdditional3 && (
-                <p className={styles.text}>{cs.abTestSectionAdditional3}</p>
-              )}
-            </section>
+          {project?.slug === 'authenticator-app-gid' && (
+            <div className={styles.heroImageWrapper}>
+              <div className={styles.heroImage}>
+                <img src={heroFintechFlowScreens} alt="" />
+              </div>
+            </div>
           )}
 
-          <div className={styles.heroImageWrapper}>
-            <div className={styles.heroImage}>
-              <img src={project?.slug === 'corporate-gid' ? heroCorporateCalendar : heroFintechAbtest} alt="" />
-            </div>
-          </div>
+          {(cs.abTestSolutionCard2 || cs.abTestSectionAdditional2) && (
+            <>
+              <section className={styles.section}>
+                {cs.abTestSolutionCard2 && (
+                  <div className={styles.solutionCard}>
+                    <blockquote className={styles.text}>{cs.abTestSolutionCard2}</blockquote>
+                  </div>
+                )}
+                {cs.abTestSectionAdditional2 && (
+                  <p className={styles.text}>{cs.abTestSectionAdditional2}</p>
+                )}
+                {cs.abTestSectionAdditional3 && (
+                  <p className={styles.text}>{cs.abTestSectionAdditional3}</p>
+                )}
+              </section>
+              <div className={styles.heroImageWrapper}>
+                <div className={`${styles.heroImage} ${styles.heroImageContain}`}>
+                  <img src={heroCorporateCalendarIteration} alt="" />
+                </div>
+              </div>
+            </>
+          )}
 
           {/* What's next */}
           <section className={styles.section}>
@@ -218,8 +234,8 @@ export default function ProjectPage() {
           </section>
 
           <div className={styles.heroImageWrapper}>
-            <div className={styles.heroImage}>
-              <img src={project?.flowImage ?? heroFintechFlow} alt="" />
+            <div className={`${styles.heroImage} ${styles.heroImageContain}`}>
+              <img src={imgs?.flow ?? project?.flowImage ?? heroFintechFlow} alt="" />
             </div>
           </div>
 

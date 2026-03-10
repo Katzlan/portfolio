@@ -104,6 +104,15 @@
   object-fit: contain;
 }
 
+/* Только блок understanding (CJM) — белый фон */
+.heroImageWhiteBg {
+  background: #fff;
+}
+
+.heroImageWhiteBg img {
+  object-fit: contain;
+}
+
 /* Изображение влезает по высоте, полосы сверху/снизу — #fff */
 .heroImageContain {
   background: #fff;

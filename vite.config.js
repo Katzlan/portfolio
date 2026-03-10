@@ -21,7 +21,7 @@ export default defineConfig({
             additionalPrerenderRoutes: [
               '/',
               '/concepts',
-              '/work/project-alpha',
+              '/work/authenticator-app-gid',
               '/work/horizon',
               '/work/gazprom-id-2025-2026',
             ],
