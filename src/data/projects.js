@@ -1,4 +1,5 @@
 import previewGidkey from '../assets/preview-gidkey.png';
+import previewCorporateGid from '../assets/preview-corporate-gid.png';
 import heroCorporateGid from '../assets/hero-corporate-gid.png';
 import heroCorporateBoard from '../assets/hero-corporate-board.png';
 
@@ -76,6 +77,7 @@ export const works = [
     id: 11,
     slug: "corporate-gid",
     icon: "wellness",
+    preview: previewCorporateGid,
     company: "Корпоративное приложение ГИД",
     year: "2025",
     title: "Как мы переосмыслили главную корпоративного приложения, чтобы она стала полезной сотруднику",
