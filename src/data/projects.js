@@ -8,7 +8,7 @@ const projectAlpha = {
   slug: "project-alpha",
     company: "ГИД Ключ",
     year: "2026",
-    title: "Как мы сделали аутентификацию проще, чем SMS",
+    title: "Как мы сократили зависимость от SMS в системе авторизации",
     tags: ["50m MAU", "UX Research", "KLM-GOMS"],
     icon: "fintech",
     preview: previewGidkey,
@@ -80,7 +80,7 @@ export const works = [
     preview: previewCorporateGid,
     company: "Корпоративное приложение ГИД",
     year: "2025",
-    title: "Как мы переосмыслили главную корпоративного приложения, чтобы она стала полезной сотруднику",
+    title: "Как мы превратили главный экран корпоративного приложения в полезный инструмент для сотрудников",
     heroImage: heroCorporateGid,
     flowImage: heroCorporateBoard,
     caseStudy: {
@@ -144,7 +144,7 @@ export const works = [
     slug: "horizon",
     company: "Газпром ID",
     year: "2025",
-    title: "Как мы решили проблему читаемости флоу входа в ID и повысили HR-бренд пейзажами от клиентов",
+    title: "Как мы решили проблему читаемости входа и запустили механику с контентом от сотрудников",
     tags: ["Top-10 AppStore", "4.9 Rating"],
     badge: "NDA",
     locked: true,
@@ -155,7 +155,7 @@ export const works = [
 
 export const designer = {
   name: "Я Энди",
-  title: "продуктовый дизайнер с\u00A0компетенцией в\u00A0AI и\u00A0маркетинге. Проектирую опыт для\u00A0пользователей с\u00A0учетом целей бизнеса и\u00A0возможностей разработки",
+  title: "продуктовый дизайнер, специализирующийся на identity-системах, аутентификации и платформенных продуктах. Проектирую опыт для сервисов, где каждая секунда входа и каждое действие пользователя влияет на бизнес",
   tagline: "crafting thoughtful solutions\nwith attention to details",
   yearsOfExperience: 4,
   bio: "I design digital products that people actually want to use. Currently shaping product experiences at [Company]. I build design systems, craft interaction details, and translate complex problems into clean, scalable interfaces.",

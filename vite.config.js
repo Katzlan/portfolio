@@ -49,6 +49,7 @@ export default defineConfig({
     },
   ],
   server: {
+    host: true,
     headers: {
       'Cache-Control': 'no-store, no-cache, must-revalidate',
     },
