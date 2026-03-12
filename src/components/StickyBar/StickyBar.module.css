@@ -129,8 +129,8 @@
 
 .tabLinkedin,
 .tabCV {
-  background: rgba(31, 31, 31, 1);
-  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -139,8 +139,8 @@
 
 .tabLinkedin:hover,
 .tabCV:hover {
-  background: #2e2e2e;
-  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
   transform: scale(1.03);
 }
 

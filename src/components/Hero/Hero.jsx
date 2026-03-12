@@ -18,14 +18,10 @@ export default function Hero() {
             tabIndex={0}
             onKeyDown={e => e.key === 'Enter' && setStoryOpen(true)}
           >
-            <video
+            <img
               className={styles.avatar}
-              src="/avatar.mp4"
-              poster="/avatar.png"
-              autoPlay
-              loop
-              muted
-              playsInline
+              src="/avatar.png"
+              alt={designer.name}
             />
           </div>
           <h1 className={styles.name}>
