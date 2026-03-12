@@ -4,6 +4,8 @@ import WorkList from './components/WorkList/WorkList';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import ConceptsPage from './pages/ConceptsPage/ConceptsPage';
 import StickyBar from './components/StickyBar/StickyBar';
+import TopBlurBar from './components/TopBlurBar/TopBlurBar';
+import BottomBlurBar from './components/BottomBlurBar/BottomBlurBar';
 import styles from './App.module.css';
 
 function Home() {
@@ -20,11 +22,13 @@ function Home() {
 export default function App() {
   return (
     <>
+      <TopBlurBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<ProjectPage />} />
         <Route path="/concepts" element={<ConceptsPage />} />
       </Routes>
+      <BottomBlurBar />
       <StickyBar />
     </>
   );
